@@ -1,0 +1,19 @@
+.titleSlide {
+  height: 100%;
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.subTitle {
+  font-style: italic;
+  font-weight: normal;
+}
