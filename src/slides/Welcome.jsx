@@ -6,13 +6,12 @@ export default function Welcome(props) {
   return (
     <div>
       <h1>Welcome</h1>
-      <p>Slide { props.slideIndex }</p>
-      <p>Slide count { props.slideCount }</p>
+      <p>Slide { props.config.slideIndex }</p>
+      <p>Slide count { props.config.slideCount }</p>
     </div>
   );
 }
 
 Welcome.propTypes = {
-  slideIndex: PropTypes.number.isRequired,
-  slideCount: PropTypes.number.isRequired
+  config: PropTypes.object.isRequired
 };

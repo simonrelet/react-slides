@@ -1,7 +1,4 @@
 .titleSlide {
-  height: 100%;
-  width: 100%;
-  padding: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,10 +7,13 @@
 
 .title {
   font-size: 3rem;
+  margin: 2.5rem 0;
   font-weight: normal;
 }
 
 .subTitle {
+  font-size: 1.5rem;
+  margin: 2rem 0;
   font-style: italic;
   font-weight: normal;
 }

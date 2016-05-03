@@ -1,7 +1,7 @@
 'use strict';
 
-import style from './TitleSlide.css';
 import React, { PropTypes } from 'react';
+import style from './TitleSlide.css';
 
 export default function TitleSlide(props) {
   return (

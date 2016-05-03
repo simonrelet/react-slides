@@ -1,0 +1,13 @@
+.slideFooter {
+  display: flex;
+  align-items: center;
+}
+
+.slideFooterItem {
+  flex: 1;
+  padding: 0.313rem 0.625rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #aaa;
+}

@@ -1,15 +1,23 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
+import style from './Slide.css';
 
 export default function Slide(props) {
   return (
-    <props.route.slide
-        slideIndex={ props.route.slideIndex }
-        slideCount={ props.route.slideCount } />
-    );
+    <div className={ style.slide }>
+      { props.hasPrev && <div onClick={props.onPrevSlide} className={ style.prevSlide } /> }
+      { props.hasNext && <div onClick={props.onNextSlide} className={ style.nextSlide } /> }
+      <props.slide config={ props.config } />
+    </div>
+  );
 }
 
 Slide.propTypes = {
-  route: PropTypes.object.isRequired
-};
+  hasPrev: PropTypes.bool.isRequired,
+  hasNext: PropTypes.bool.isRequired,
+  onPrevSlide: PropTypes.func.isRequired,
+  onNextSlide: PropTypes.func.isRequired,
+  slide: PropTypes.any.isRequired,
+  config: PropTypes.object.isRequired
+}
