@@ -33,6 +33,6 @@ Each slide will be given a `config` attribute in it's `props` containing:
 
 ## TODO
 
-* [ ] Find a way to navigate with through the slides with the arrow keys.
+* [ ] Find a way to navigate through the slides with the arrow keys.
 * [ ] Uses links in summary to jump directly to the corresponding slide.
 * [ ] Create more templates.
