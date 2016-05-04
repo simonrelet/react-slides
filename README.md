@@ -1,6 +1,6 @@
 # react-slides
 
-React application for slides
+React application for slides.
 
 ## Usage
 
