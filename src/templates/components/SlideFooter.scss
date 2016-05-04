@@ -1,6 +1,7 @@
+@import '~styles/_layouts.scss';
+
 .slideFooter {
-  display: flex;
-  align-items: center;
+  @include layout-horizontal(center);
 }
 
 .slideFooterItem {

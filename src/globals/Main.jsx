@@ -1,7 +1,7 @@
 'use strict';
 
-import style from './Main.css';
 import React, { PropTypes } from 'react';
+import style from './Main.scss';
 
 export default function Main(props) {
   return (
@@ -12,5 +12,5 @@ export default function Main(props) {
 }
 
 Main.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.element.isRequired
 };

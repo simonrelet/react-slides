@@ -6,7 +6,7 @@ import TitleSlide from '../templates/containers/TitleSlide';
 export default function Title() {
   return (
     <TitleSlide
-      title="Let's React"
+      title="Title"
       subTitle='This is awesome!' />
   );
 }

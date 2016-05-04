@@ -10,6 +10,7 @@ module.exports = {
 
   output: {
     path: `${__dirname}/dist`,
+    publicPath: '/',
     filename: 'index_bundle.js'
   },
 
@@ -21,9 +22,9 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass')
       },
       {
         test: /\.svg$/,
@@ -42,6 +43,10 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: [ '', '.js', '.jsx' ]
+    extensions: [ '', '.js', '.jsx' ],
+    alias: {
+      styles: `${__dirname}/src/styles-partials`,
+      icons: `${__dirname}/src/icons`
+    }
   }
 };

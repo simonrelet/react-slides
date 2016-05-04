@@ -1,0 +1,10 @@
+@import '~styles/_layouts.scss';
+
+.summarySlide {
+  @include layout-vertical(center, center);
+}
+
+.summaryItem {
+  margin: 1rem 0;
+  font-size: 2rem;
+}

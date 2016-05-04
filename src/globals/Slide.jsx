@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import style from './Slide.css';
+import style from './Slide.scss';
 
 export default function Slide(props) {
   return (

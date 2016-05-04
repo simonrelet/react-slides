@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import style from './SummarySlide.css';
+import style from './SummarySlide.scss';
 
 export function SummaryItem(props) {
   return (

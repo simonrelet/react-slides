@@ -1,0 +1,9 @@
+@import '_constants.scss';
+
+@function font-size($size) {
+  @return map-get(map-get($font-size, $size), 'font-size');
+}
+
+@function paddingForText($size) {
+  @return map-get(map-get($font-size, $size), 'padding');
+}

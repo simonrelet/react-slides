@@ -1,0 +1,37 @@
+@import '~styles/_layouts.scss';
+
+.slide {
+  @include layout-horizontal;
+
+  > *:last-child {
+    flex: 1;
+  }
+}
+
+@mixin navigation-item {
+  width: 5rem;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prevSlide {
+  @include navigation-item;
+  left: 0;
+
+  &:hover {
+    background-image: url('icons/left-arrow.svg');
+  }
+}
+
+.nextSlide {
+  @include navigation-item;
+  right: 0;
+
+  &:hover {
+    background-image: url('icons/right-arrow.svg');
+  }
+}

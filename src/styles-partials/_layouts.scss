@@ -1,0 +1,22 @@
+@mixin layout($direction, $alignment, $packing) {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignment;
+  justify-content: $packing;
+}
+
+@mixin layout-horizontal($alignment: stretch, $packing: flex-start) {
+  @include layout(row, $alignment, $packing);
+}
+
+@mixin layout-vertical($alignment: stretch, $packing: flex-start) {
+  @include layout(column, $alignment, $packing);
+}
+
+@mixin children-fill-content {
+  > * {
+    flex: 1;
+  }
+}

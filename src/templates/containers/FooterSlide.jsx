@@ -2,7 +2,7 @@
 
 import React, { PropTypes } from 'react';
 import SlideFooter, { SlideFooterItem } from '../components/SlideFooter';
-import style from './FooterSlide.css';
+import style from './FooterSlide.scss';
 
 export default function FooterSlide(props) {
   const { title, date, slideIndex, slideCount } = props.config;

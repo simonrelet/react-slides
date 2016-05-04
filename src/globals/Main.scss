@@ -1,0 +1,35 @@
+@import '~styles/_utils.scss';
+@import '~styles/_layouts.scss';
+
+html {
+  @include layout-vertical;
+  @include children-fill-content;
+  width: 100%;
+  height: 100%;
+  font-size: font-size('normal');
+  background-color: white;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+  }
+
+  body {
+    @include layout-vertical;
+    font-size: font-size('normal');
+    font-family: $font-family;
+    color: $text-color;
+
+    > *:first-child {
+      flex: 1;
+      @include layout-vertical;
+      @include children-fill-content;
+    }
+  }
+}
+
+.main {
+  @include layout-vertical;
+  @include children-fill-content;
+  padding: 1.25em;
+}

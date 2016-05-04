@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import style from './SlideFooter.css';
+import style from './SlideFooter.scss';
 
 export default function SlideFooter(props) {
   return (

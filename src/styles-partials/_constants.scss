@@ -1,0 +1,22 @@
+$font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$text-color: #333;
+
+$font-size: (
+  'small': (
+    font-size: 0.9rem,
+    padding: 0.9rem
+  ),
+  'normal': (
+    font-size: 1rem,
+    padding: 1rem
+  ),
+  'large': (
+    font-size: 1.2rem,
+    padding: 1.2rem
+  ),
+  'x-large': (
+    font-size: 2rem,
+    padding: 2rem
+  )
+);
