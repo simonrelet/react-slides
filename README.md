@@ -11,7 +11,7 @@ npm run start
 
 Then open a browser at `localhost:8080`.
 
-Click on right or left side of the pages to navigate through the slides.
+Click on the right or left side of the pages to navigate through the slides.
 
 ## Your slides
 
@@ -25,11 +25,31 @@ The exported configuration must be an object with the following properties:
 Your slides can use any templates under `src/templates/containers/` or you own
 ones.
 
-Each slide will be given a `config` attribute in it's `props` containing:
+Each slide will be provided with a `config` attribute in it's `props` containing:
 * `title` (`string`): The title from `config.js`
 * `date` (`string`): The date  from `config.js`
 * `slideIndex` (`number`): The current slide index (starting at 0)
 * `slideCount` (`number`): The total number of slides
+
+Example:
+```jsx
+'use strict';
+
+import React, { PropTypes } from 'react';
+import TitleSlide from '../templates/containers/TitleSlide';
+
+export default function Title(props) {
+  return (
+    <TitleSlide
+      title={ props.config.title }
+      subTitle='This is awesome!' />
+  );
+}
+
+Title.propTypes = {
+  config: PropTypes.object.isRequired
+}
+```
 
 ## TODO
 
