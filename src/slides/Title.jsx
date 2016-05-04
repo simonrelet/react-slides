@@ -1,12 +1,16 @@
 'use strict';
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import TitleSlide from '../templates/containers/TitleSlide';
 
-export default function Title() {
+export default function Title(props) {
   return (
     <TitleSlide
-      title="Title"
+      title={ props.config.title }
       subTitle='This is awesome!' />
   );
+}
+
+Title.propTypes = {
+  config: PropTypes.object.isRequired
 }
