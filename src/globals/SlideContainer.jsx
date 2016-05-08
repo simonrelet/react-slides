@@ -3,6 +3,9 @@
 import React, { PropTypes } from 'react';
 import Slide from './Slide';
 
+const RIGHT_KEY = 39;
+const LEFT_KEY = 37;
+
 export default React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -44,6 +47,14 @@ export default React.createClass({
     }
   },
 
+  handleKeyUp(e) {
+    if (e.keyCode === RIGHT_KEY) {
+      this.handleNextSlide(e);
+    } else if(e.keyCode === LEFT_KEY) {
+      this.handlePrevSlide(e);
+    }
+  },
+
   render() {
     return (
       <Slide
@@ -51,6 +62,7 @@ export default React.createClass({
         config={ this.props.route.config }
         hasPrev={ this.hasPrevSlide() }
         hasNext={ this.hasNextSlide() }
+        onKeyUp={ this.handleKeyUp }
         onPrevSlide={ this.handlePrevSlide }
         onNextSlide={ this.handleNextSlide } />
     );

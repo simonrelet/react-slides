@@ -53,6 +53,6 @@ Title.propTypes = {
 
 ## TODO
 
-* [ ] Find a way to navigate through the slides with the arrow keys.
+* [x] Find a way to navigate through the slides with the arrow keys.
 * [ ] Uses links in summary to jump directly to the corresponding slide.
 * [ ] Create more templates.

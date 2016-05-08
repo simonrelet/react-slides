@@ -6,6 +6,10 @@
   > *:last-child {
     flex: 1;
   }
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 @mixin navigation-item {
