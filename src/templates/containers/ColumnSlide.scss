@@ -1,0 +1,22 @@
+@import '~styles/_layouts.scss';
+
+.component {
+  @include layout-vertical;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 2.5rem 0;
+  font-weight: normal;
+  text-align: center;
+}
+
+.children {
+  flex: 1;
+  @include layout-horizontal;
+  @include children-fill-content;
+
+  > *:not(:first-child) {
+    margin-left: 1.25em;
+  }
+}

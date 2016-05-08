@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import SlideFooter, { SlideFooterItem } from '../components/SlideFooter';
+import Footer, { FooterItem } from '../components/Footer';
 import style from './FooterSlide.scss';
 
 export default function FooterSlide(props) {
@@ -9,11 +9,11 @@ export default function FooterSlide(props) {
   return (
     <div className={ style.slideFooter }>
       { props.children }
-      <SlideFooter>
-        <SlideFooterItem value={ `${slideIndex} / ${slideCount}` }/>
-        <SlideFooterItem value={ title }/>
-        <SlideFooterItem value={ date }/>
-      </SlideFooter>
+      <Footer>
+        <FooterItem value={ `${slideIndex} / ${slideCount}` }/>
+        <FooterItem value={ title }/>
+        <FooterItem value={ date }/>
+      </Footer>
     </div>
   );
 }

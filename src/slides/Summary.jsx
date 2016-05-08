@@ -8,9 +8,9 @@ export default function Summary(props) {
   return (
     <FooterSlide config={ props.config }>
       <SummarySlide>
-        <SummaryItem value='Item 1'/>
-        <SummaryItem value='Item 2'/>
-        <SummaryItem value='Item 3'/>
+        <SummaryItem value={ 'Item 1' } />
+        <SummaryItem value={ 'Item 2' } />
+        <SummaryItem value={ 'Item 3' } />
       </SummarySlide>
     </FooterSlide>
   );
