@@ -7,7 +7,7 @@ export default function Slide(props) {
   return (
     <div
       tabIndex={ 1 }
-      autoPlay={ true }
+      autoFocus={ true }
       className={ style.slide }
       onKeyDown={ props.onKeyUp }>
       { props.hasPrev && <div onClick={props.onPrevSlide} className={ style.prevSlide } /> }

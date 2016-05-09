@@ -13,7 +13,7 @@
 
 .children {
   flex: 1;
-  @include layout-horizontal;
+  @include layout-horizontal(flex-start);
   @include children-fill-content;
 
   > *:not(:first-child) {
