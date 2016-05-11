@@ -43,6 +43,7 @@ module.exports = {
   ],
 
   resolve: {
+    modulesDirectories: [ 'src', 'lib', 'node_modules' ],
     extensions: [ '', '.js', '.jsx' ],
     alias: {
       styles: `${__dirname}/src/styles-partials`,

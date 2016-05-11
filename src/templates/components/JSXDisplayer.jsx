@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import lexer from '../../../lib/jsx-lexer';
+import lexer from 'jsx-lexer';
 import style from './JSXDisplayer.scss';
 
 function wrap(key, className, value) {

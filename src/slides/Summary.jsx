@@ -1,8 +1,8 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import SummarySlide, { SummaryItem } from '../templates/containers/SummarySlide';
-import FooterSlide from '../templates/containers/FooterSlide';
+import SummarySlide, { SummaryItem } from 'templates/containers/SummarySlide';
+import FooterSlide from 'templates/containers/FooterSlide';
 
 export default function Summary(props) {
   return (

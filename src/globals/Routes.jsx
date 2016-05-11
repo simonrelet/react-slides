@@ -4,7 +4,7 @@ import React from 'react';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import Main from './Main';
 import SlideContainer from './SlideContainer';
-import config from '../slides/config';
+import config from 'slides/config';
 
 function getConfig(index, count) {
   return {

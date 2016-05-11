@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import TitleSlide from '../templates/containers/TitleSlide';
+import TitleSlide from 'templates/containers/TitleSlide';
 
 export default function Title(props) {
   return (

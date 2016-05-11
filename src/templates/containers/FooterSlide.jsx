@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import Footer, { FooterItem } from '../components/Footer';
+import Footer, { FooterItem } from 'templates/components/Footer';
 import style from './FooterSlide.scss';
 
 export default function FooterSlide(props) {
