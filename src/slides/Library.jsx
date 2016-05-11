@@ -9,8 +9,8 @@ export default function Slide() {
         direction='vertical'
         alignment='middle'
         packing='center'>
-      <h1>Let's React!</h1>
-      <h2>Everthing can be a <b>component</b>.</h2>
+      <h1>It's a <b>library</b></h1>
+      <h3>And <b>not a Framework</b>.</h3>
     </Layout>
   );
 }

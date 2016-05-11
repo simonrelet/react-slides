@@ -1,0 +1,60 @@
+@import '~styles/_layouts.scss';
+
+.layout {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.fillContent {
+  > * {
+    flex: 1;
+  }
+}
+
+// Direction
+.horizontal {
+  flex-direction: row;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+// Alignment
+.start {
+  align-items: flex-start;
+}
+
+.middle {
+  align-items: center;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+.strech {
+  align-items: stretch;
+}
+
+// Packing
+.first {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.last {
+  justify-content: flex-end;
+}
+
+.spaceAround {
+  justify-content: space-around;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}

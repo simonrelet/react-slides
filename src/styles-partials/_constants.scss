@@ -5,18 +5,22 @@ $text-color: #333;
 $font-size: (
   'small': (
     font-size: 0.9rem,
-    padding: 0.9rem
+    spacing: 0.9rem
   ),
   'normal': (
     font-size: 1rem,
-    padding: 1rem
+    spacing: 0.5rem
   ),
   'large': (
     font-size: 1.2rem,
-    padding: 1.2rem
+    spacing: 1rem
   ),
-  'x-large': (
+  'xlarge': (
     font-size: 2rem,
-    padding: 2rem
+    spacing: 1rem
+  ),
+  'xxlarge': (
+    font-size: 4rem,
+    spacing: 2rem
   )
 );

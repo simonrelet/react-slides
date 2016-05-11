@@ -3,11 +3,12 @@
 
 .code {
   background-color: #f7f7f7;
-  padding: paddingForText(normal);
+  padding: spacingForText(large);
   border-radius: 0.313rem;
 }
 
 .title {
+  font-size: fontSize(small);
   margin: 0;
   margin-bottom: paddingForText(normal);
   padding-bottom: paddingForText(normal) / 2;

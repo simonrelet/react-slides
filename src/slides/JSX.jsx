@@ -9,8 +9,12 @@ export default function Slide() {
         direction='vertical'
         alignment='middle'
         packing='center'>
-      <h1>Let's React!</h1>
-      <h2>Everthing can be a <b>component</b>.</h2>
+      <h1><b>JSX</b></h1>
+      <h3>
+        A JavaScript <b>XML based</b> extension
+        <br />
+        that compile <b>just the template</b> part of your code.
+      </h3>
     </Layout>
   );
 }

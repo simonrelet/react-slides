@@ -6,7 +6,7 @@ html {
   @include children-fill-content;
   width: 100%;
   height: 100%;
-  font-size: font-size('normal');
+  font-size: fontSize(normal);
   background-color: white;
   box-sizing: border-box;
 
@@ -16,7 +16,7 @@ html {
 
   body {
     @include layout-vertical;
-    font-size: font-size('normal');
+    font-size: fontSize(normal);
     font-family: $font-family;
     color: $text-color;
 
@@ -32,4 +32,24 @@ html {
   @include layout-vertical;
   @include children-fill-content;
   padding: 1.25em;
+}
+
+@mixin title($size) {
+  font-weight: normal;
+  font-size: fontSize($size);
+  margin-top: spacingForText($size);
+  margin-bottom: spacingForText($size);
+  text-align: center;
+}
+
+h1 {
+  @include title(xxlarge);
+}
+
+h2 {
+  @include title(xlarge);
+}
+
+h3 {
+  @include title(large);
 }

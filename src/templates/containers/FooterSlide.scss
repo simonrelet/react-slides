@@ -1,9 +1,0 @@
-@import '~styles/_layouts.scss';
-
-.slideFooter {
-  @include layout-vertical;
-}
-
-.slideFooter > *:not(:last-child) {
-  flex: 1;
-}

@@ -7,12 +7,13 @@ import SlideContainer from './SlideContainer';
 import config from 'slides/config';
 
 function getConfig(index, count) {
-  return {
-    slideIndex: index,
-    slideCount : count,
-    title: config.title,
-    date: config.date
-  };
+  const res = { slideIndex: index, slideCount : count }
+  for (let prop in config) {
+    if (config.hasOwnProperty(prop) && prop !== 'slides') {
+      res[prop] = config[prop]
+    }
+  }
+  return res;
 }
 
 const slideCount = config.slides.length;
