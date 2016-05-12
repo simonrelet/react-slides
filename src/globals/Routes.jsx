@@ -4,20 +4,20 @@ import React from 'react';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import Main from './Main';
 import SlideContainer from './SlideContainer';
-import config from 'slides/Config';
+import Config from 'slides/Config';
 
 function getConfig(index, count) {
   const res = { slideIndex: index, slideCount : count }
-  for (let prop in config) {
-    if (config.hasOwnProperty(prop) && prop !== 'slides') {
-      res[prop] = config[prop]
+  for (let prop in Config) {
+    if (Config.hasOwnProperty(prop) && prop !== 'slides') {
+      res[prop] = Config[prop]
     }
   }
   return res;
 }
 
-const slideCount = config.slides.length;
-const slidesRoutes = config.slides.map((slide, index) => (
+const slideCount = Config.slides.length;
+const slidesRoutes = Config.slides.map((slide, index) => (
   <Route
       path={ `${index}` }
       key={ index }

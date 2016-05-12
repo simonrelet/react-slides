@@ -56,10 +56,18 @@ export default React.createClass({
   },
 
   render() {
+    const route = this.props.route;
+    if (document && route.config.title) {
+      const subtitle = route.config.subtitle
+        ? ` - ${route.config.subtitle}`
+        : '';
+      document.title = `${route.config.title}${subtitle}`;
+    }
+
     return (
       <Slide
-        slide={ this.props.route.slide }
-        config={ this.props.route.config }
+        slide={ route.slide }
+        config={ route.config }
         hasPrev={ this.hasPrevSlide() }
         hasNext={ this.hasNextSlide() }
         onKeyUp={ this.handleKeyUp }
