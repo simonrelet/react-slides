@@ -31,7 +31,6 @@ html {
 .main {
   @include layout-vertical;
   @include children-fill-content;
-  padding: 1.25em;
 }
 
 @mixin title($size) {

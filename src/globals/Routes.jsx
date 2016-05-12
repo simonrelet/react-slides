@@ -4,7 +4,7 @@ import React from 'react';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import Main from './Main';
 import SlideContainer from './SlideContainer';
-import config from 'slides/config';
+import config from 'slides/Config';
 
 function getConfig(index, count) {
   const res = { slideIndex: index, slideCount : count }
@@ -19,11 +19,11 @@ function getConfig(index, count) {
 const slideCount = config.slides.length;
 const slidesRoutes = config.slides.map((slide, index) => (
   <Route
-    path={ `${index}` }
-    key={ index }
-    slide={ slide }
-    config= { getConfig(index, slideCount) }
-    component={ SlideContainer } />
+      path={ `${index}` }
+      key={ index }
+      slide={ slide }
+      config= { getConfig(index, slideCount) }
+      component={ SlideContainer } />
 ));
 
 export default (
