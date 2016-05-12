@@ -3,17 +3,21 @@
 import React from 'react';
 import LayoutHSF from 'templates/containers/LayoutHSF';
 import LayoutVCM from 'templates/containers/LayoutVCM';
+import JSXDisplayer from 'templates/components/JSXDisplayer';
+import Todo from './examples/Todo';
+import todoCode from '!!raw!./examples/Todo';
 
 export default function Slide() {
   return (
     <LayoutHSF>
       <LayoutVCM>
-        <h2><i>Library</i></h2>
-        <p><b>A tool</b> to resolve just one <b>specific thing.</b></p>
+        <Todo />
       </LayoutVCM>
       <LayoutVCM>
-        <h2><i>Framework</i></h2>
-        <p>A <b>set of tools</b> to resolve a <b>lot of things.</b></p>
+        <JSXDisplayer
+            title='Todo.jsx'
+            content={ todoCode }
+            highlightLines={[ ]} />
       </LayoutVCM>
     </LayoutHSF>
   );

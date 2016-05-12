@@ -6,8 +6,10 @@ import LayoutVCM from 'templates/containers/LayoutVCM';
 export default function Slide() {
   return (
     <LayoutVCM>
-      <h1>It's a <b>library</b></h1>
-      <h3>And <b>not a Framework</b>.</h3>
+      <h1>Ecosystem</h1>
+      <h3>Bundle with <b>Webpack</b>.</h3>
+      <h3>Transpile with <b>Babel</b>.</h3>
+      <h3>Manage styles with <b>Style loader</b>.</h3>
     </LayoutVCM>
   );
 }

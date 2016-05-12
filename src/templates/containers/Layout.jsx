@@ -7,8 +7,8 @@ import style from './Layout.scss';
 export default React.createClass({
   propTypes: {
     direction: PropTypes.oneOf([ 'horizontal', 'vertical' ]),
-    alignment: PropTypes.oneOf([ 'start', 'middle', 'end', 'strech' ]),
-    packing: PropTypes.oneOf([ 'first', 'center', 'last', 'spaceAround', 'spaceBetween' ]),
+    alignment: PropTypes.oneOf([ 'start', 'center', 'end', 'strech' ]),
+    packing: PropTypes.oneOf([ 'first', 'middle', 'last', 'spaceAround', 'spaceBetween' ]),
     fillContent: PropTypes.bool,
     children: PropTypes.oneOfType([
       PropTypes.element,

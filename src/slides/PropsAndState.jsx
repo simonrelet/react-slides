@@ -8,12 +8,14 @@ export default function Slide() {
   return (
     <LayoutHSF>
       <LayoutVCM>
-        <h2><i>Library</i></h2>
-        <p><b>A tool</b> to resolve just one <b>specific thing.</b></p>
+        <h2><code>props</code></h2>
+        <p><b>Immutable</b>.</p>
+        <p><code>props.children</code> contains... Children!</p>
       </LayoutVCM>
       <LayoutVCM>
-        <h2><i>Framework</i></h2>
-        <p>A <b>set of tools</b> to resolve a <b>lot of things.</b></p>
+        <h2><code>state</code></h2>
+        <p><b>Mutable</b>.</p>
+        <p>Explicite mutation by <code>setState()</code>.</p>
       </LayoutVCM>
     </LayoutHSF>
   );

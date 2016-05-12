@@ -6,8 +6,10 @@ import LayoutVCM from 'templates/containers/LayoutVCM';
 export default function Slide() {
   return (
     <LayoutVCM>
-      <h1>It's a <b>library</b></h1>
-      <h3>And <b>not a Framework</b>.</h3>
+      <h1>Data flow</h1>
+      <h3><b>Unidirectional</b>.</h3>
+      <h3>Receive data by <code><b>props</b></code>.</h3>
+      <h3>Manage its <code><b>state</b></code>.</h3>
     </LayoutVCM>
   );
 }

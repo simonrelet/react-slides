@@ -1,14 +1,11 @@
 'use strict';
 
 import React from 'react';
-import Layout from 'templates/containers/Layout';
+import LayoutVCM from 'templates/containers/LayoutVCM';
 
 export default function Slide() {
   return (
-    <Layout
-        direction='vertical'
-        alignment='middle'
-        packing='center'>
+    <LayoutVCM>
       <h2><i>Rendering loop</i></h2>
       <ol>
         <li>Some data has <b>Changed</b></li>
@@ -17,6 +14,6 @@ export default function Slide() {
         <li>Compute <b>minimal</b> sets of <b>mutations</b></li>
         <li><b>Execute</b> all updates</li>
       </ol>
-    </Layout>
+    </LayoutVCM>
   );
 }

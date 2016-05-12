@@ -1,16 +1,14 @@
 'use strict';
 
 import React from 'react';
-import Layout from 'templates/containers/Layout';
+import LayoutVCM from 'templates/containers/LayoutVCM';
 
 export default function Slide() {
   return (
-    <Layout
-        direction='vertical'
-        alignment='middle'
-        packing='center'>
+    <LayoutVCM>
       <h1>Let's React!</h1>
-      <h2>Everthing can be a <b>component</b>.</h2>
-    </Layout>
+      <h3><i>Keep it <b>simple</b>.</i></h3>
+      <h3><i>Everthing can be a <b>component</b>.</i></h3>
+    </LayoutVCM>
   );
 }

@@ -6,8 +6,7 @@ import LayoutVCM from 'templates/containers/LayoutVCM';
 export default function Slide() {
   return (
     <LayoutVCM>
-      <h1>It's a <b>library</b></h1>
-      <h3>And <b>not a Framework</b>.</h3>
+      <h1>It's just <b>JavaScript</b></h1>
     </LayoutVCM>
   );
 }
