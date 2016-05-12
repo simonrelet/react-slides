@@ -5,34 +5,37 @@
   background-color: #f7f7f7;
   padding: spacingForText(large);
   border-radius: 0.313rem;
+  color: #ccc;
 }
 
 .title {
   font-size: fontSize(small);
   margin: 0;
-  margin-bottom: paddingForText(normal);
-  padding-bottom: paddingForText(normal) / 2;
+  margin-bottom: spacingForText(normal);
+  padding-bottom: spacingForText(normal) / 2;
   font-style: italic;
   border-bottom: 1px solid #ccc;
   color: #888;
 }
 
-.text {
-  color: $text-color;
-}
+.highlight {
+  .text {
+    color: $text-color;
+  }
 
-.string {
-  color: #388e3c;
-}
+  .string {
+    color: #388e3c;
+  }
 
-.keyword {
-  color: #0277bd;
-}
+  .keyword {
+    color: #0277bd;
+  }
 
-.type {
-  color: #e65100;
-}
+  .type {
+    color: #e65100;
+  }
 
-.attribute {
-  color: brown;
+  .attribute {
+    color: brown;
+  }
 }

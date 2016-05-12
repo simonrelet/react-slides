@@ -4,9 +4,15 @@ import Title from './Title';
 import Library from './Library';
 import LibraryVsFramework from './LibraryVsFramework';
 import VirtualDOM from './VirtualDOM';
-import VirtualDOMLoop from './VirtualDOMLoop';
+import RenderingLoop from './RenderingLoop';
+import Demo from './Demo';
+import DemoForReal from './DemoForReal';
 import JSX from './JSX';
 import HelloWorldExample from './HelloWorldExample';
+import HelloWorldExampleImport from './HelloWorldExampleImport';
+import HelloWorldExampleComponent from './HelloWorldExampleComponent';
+import HelloWorldExampleRender from './HelloWorldExampleRender';
+import HelloWorldExampleJSX from './HelloWorldExampleJSX';
 import HelloWorldExampleCompiled from './HelloWorldExampleCompiled';
 
 export default {
@@ -18,9 +24,15 @@ export default {
     Library,
     LibraryVsFramework,
     VirtualDOM,
-    VirtualDOMLoop,
+    RenderingLoop,
     JSX,
     HelloWorldExample,
-    HelloWorldExampleCompiled
+    HelloWorldExampleImport,
+    HelloWorldExampleComponent,
+    HelloWorldExampleRender,
+    HelloWorldExampleJSX,
+    HelloWorldExampleCompiled,
+    Demo,
+    DemoForReal
   ]
 };

@@ -13,7 +13,9 @@ export default function Slide() {
         alignment='middle'
         packing='center'>
       <HelloWorld />
-      <JSXDisplayer title='HelloWorld.jsx' content={ helloWorldCode } />
+      <JSXDisplayer
+          title='HelloWorld.jsx'
+          content={ helloWorldCode } />
     </Layout>
   );
 }
