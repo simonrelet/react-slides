@@ -1,9 +1,8 @@
 import React, { PropTypes } from 'react';
-import style from './TodoView.scss';
 
 function Item(props) {
   return (
-    <div className={ style.item }>{ props.value }</div>
+    <div>{ props.value }</div>
   );
 }
 
@@ -17,18 +16,15 @@ export default function TodoView(props) {
   ));
 
   return (
-    <div className={ style.todo }>
+    <div>
       <form onSubmit={ props.onAddTodo }>
         <input
-            className={ style.input }
             type='text'
             placeholder='Enter todo'
             onChange={ props.onValueChanged }
             value={ props.value } />
       </form>
-      <div className={ style.todos }>
-        { todos }
-      </div>
+      { todos }
     </div>
   );
 }

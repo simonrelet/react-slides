@@ -18,6 +18,7 @@ import TodoDemo from './TodoDemo';
 import PureFunctions from './PureFunctions';
 import SeparationOfConcerns from './SeparationOfConcerns';
 import ContainerVsPresentational from './ContainerVsPresentational';
+import StyleLoaders from './StyleLoaders';
 
 import HelloWorld from './examples/HelloWorld';
 import HelloSomeone from './examples/HelloSomeone';
@@ -30,6 +31,8 @@ import helloYouFunctionalCode from '!!raw!./examples/HelloYouFunctional';
 import todoBaseCode from '!!raw!./examples/TodoBase';
 import todoCode from '!!raw!./examples/Todo';
 import todoViewCode from '!!raw!./examples/TodoView';
+import todoViewUnstyledCode from '!!raw!./examples/TodoViewUnstyled';
+import todoViewStyleCode from '!!raw!./examples/TodoView.scss';
 import todoContainerCode from '!!raw!./examples/TodoContainer';
 
 export default {
@@ -184,7 +187,7 @@ export default {
     </DemoCodeVertical>,
     <DemoCodeVertical
         title='TodoView.jsx'
-        code={ todoViewCode }
+        code={ todoViewUnstyledCode }
         keepRange={[
           { first: 12, last: 15 },
           { first: 18, last: 25 },
@@ -195,7 +198,7 @@ export default {
     </DemoCodeVertical>,
     <DemoCodeVertical
         title='TodoView.jsx'
-        code={ todoViewCode }
+        code={ todoViewUnstyledCode }
         keepRange={[
           { first: 2, last: 10 }
         ]}>
@@ -213,6 +216,35 @@ export default {
         highlightLines={[ 10, 12, 13, 21, 24, 25, 26, 27, 28 ]}>
       <h1>Todo <b>container</b></h1>
     </DemoCodeVertical>,
-    <ContainerVsPresentational />
+    <ContainerVsPresentational />,
+    <StyleLoaders />,
+    <DemoCodeVertical
+        title='TodoView.jsx'
+        code={ todoViewCode }
+        keepRange={[
+          { first: 0, last: 2 },
+          { first: 4, last: 6 },
+          { first: 18, last: 20 },
+          { first: 21, last: 23 },
+          { first: 27, last: 31 }
+        ]}
+        highlightLines={[ 1, 5, 19, 22, 28, 30 ]}>
+      <h1>Todo <b>view</b></h1>
+    </DemoCodeVertical>,
+    <DemoCodeVertical
+        title='TodoView.scss'
+        code={ todoViewStyleCode }
+        keepRange={[
+          { first: 0, last: 0 },
+          { first: 4, last: 5 },
+          { first: 9, last: 10 },
+          { first: 12, last: 13 },
+          { first: 16, last: 16 },
+          { first: 18, last: 18 },
+          { first: 19, last: 19 }
+        ]}
+        highlightLines={[  ]}>
+      <h1>Todo <b>view</b></h1>
+    </DemoCodeVertical>
   ]
 };
