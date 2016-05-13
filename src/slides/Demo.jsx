@@ -6,7 +6,7 @@ import LayoutVCM from 'templates/containers/LayoutVCM';
 export default function Slide(props) {
   return (
     <LayoutVCM>
-      { props.question ? <h1>Demo</h1> : <h1><i>Demo</i> <b>?</b></h1> }
+      { props.question ? <h1>Demo</h1> : <h1>Demo <b>?</b></h1> }
     </LayoutVCM>
   );
 }

@@ -2,22 +2,27 @@ import React from 'react';
 
 export default React.createClass({
   getInitialState() {
-    return { todos: [], value: '' }
+    return {
+      todos: [],
+      value: ''
+    }
   },
-
   handleChange(e) {
     this.setState({ value: e.target.value });
   },
-
   handleSubmit(e) {
     e.preventDefault();
     const s = this.state;
     const newTodos = s.todos.concat(s.value);
-    this.setState({ value: '', todos: newTodos });
+    this.setState({
+      todos: newTodos,
+      value: ''
+    });
   },
-
   render() {
-    const todos = this.state.todos.map((td, i) => <div key={ i }>{ td }</div>);
+    const todos = this.state.todos.map((td, i) => (
+      <div key={ i }>{ td }</div>
+    ));
     return (
       <div>
         <form onSubmit={ this.handleSubmit }>

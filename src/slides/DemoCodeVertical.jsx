@@ -7,7 +7,8 @@ import JSXDisplayer from 'templates/components/JSXDisplayer';
 export default React.createClass({
   getDefaultProps() {
     return {
-      highlightLines: []
+      highlightLines: [],
+      keepRange: []
     };
   },
 
@@ -18,7 +19,8 @@ export default React.createClass({
       PropTypes.element,
       PropTypes.array
     ]),
-    highlightLines: PropTypes.arrayOf(PropTypes.number)
+    highlightLines: PropTypes.arrayOf(PropTypes.number),
+    keepRange: PropTypes.arrayOf(PropTypes.object)
   },
 
   render() {
@@ -28,6 +30,7 @@ export default React.createClass({
         <JSXDisplayer
             title={ this.props.title }
             content={ this.props.code }
+            keepRange={ this.props.keepRange }
             highlightLines={ this.props.highlightLines } />
       </LayoutVCM>
     );

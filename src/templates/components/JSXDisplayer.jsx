@@ -30,6 +30,8 @@ function parseLine(line) {
         return wrap(i, style.type, token.val);
       case 'attribute':
         return wrap(i, style.attribute, token.val);
+      case 'comment':
+        return wrap(i, style.comment, token.val);
       default:
         return wrap(i, '', token.val);
     }
@@ -41,22 +43,62 @@ function getLineClassName(line, lines) {
   return classnames({ [style.highlight]: highlight });
 }
 
-function parse(content, highlightLines = []) {
-  return content.trim().split(/\r?\n/).map((line, i) => (
-    <div key={ i } className={ getLineClassName(i, highlightLines) }>
-      <code>
-        { parseLine(line) }
-        <br />
-      </code>
-    </div>
-  ));
+function keepLine(keepRange) {
+  return line => {
+    return !keepRange.length || keepRange.some(range => {
+      return line.lineIndex >= range.first && line.lineIndex <= range.last;
+    });
+  };
+}
+
+function last(arr) {
+  return arr[arr.length - 1];
+}
+
+function regroupRanges(acc, line) {
+  const prevLine = acc.length ? last(last(acc)).lineIndex : -2;
+  if (prevLine === line.lineIndex - 1) {
+    last(acc).push(line);
+  } else {
+    acc.push([ line ]);
+  }
+  return acc;
+}
+
+function separateRangeGroups(acc, group) {
+  if (!acc.length) {
+    return group;
+  } else {
+    return acc.concat({
+      lineIndex: group[0].lineIndex - 1,
+      line: '// ...'
+    }).concat(group);
+  }
+}
+
+function parse(content, highlightLines = [], keepRange = []) {
+  return content.trim().split(/\r?\n/)
+    .map((line, i) => ({ lineIndex: i, line: line }))
+    .filter(keepLine(keepRange))
+    .reduce(regroupRanges, [])
+    .reduce(separateRangeGroups, [])
+    .map(line => (
+      <div
+          key={ line.lineIndex }
+          className={ getLineClassName(line.lineIndex, highlightLines) }>
+        <code>
+          { parseLine(line.line) }
+          <br />
+        </code>
+      </div>
+    ));
 }
 
 export default function JSXDisplayer(props) {
   return (
     <div className={ style.code }>
       { props.title && <p className={ style.title }>{ props.title }</p> }
-      { parse(props.content, props.highlightLines) }
+      { parse(props.content, props.highlightLines, props.keepRange) }
     </div>
   );
 }
@@ -64,5 +106,6 @@ export default function JSXDisplayer(props) {
 JSXDisplayer.propTypes = {
   content: PropTypes.string.isRequired,
   title: PropTypes.string,
-  highlightLines: PropTypes.arrayOf(PropTypes.number)
+  highlightLines: PropTypes.arrayOf(PropTypes.number),
+  keepRange: PropTypes.arrayOf(PropTypes.object)
 };
