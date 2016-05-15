@@ -19,6 +19,8 @@ import PureFunctions from './PureFunctions';
 import SeparationOfConcerns from './SeparationOfConcerns';
 import ContainerVsPresentational from './ContainerVsPresentational';
 import StyleLoaders from './StyleLoaders';
+import Questions from './Questions';
+import Links from './Links';
 
 import HelloWorld from './examples/HelloWorld';
 import HelloSomeone from './examples/HelloSomeone';
@@ -67,7 +69,7 @@ export default {
     <DemoCodeVertical
         title='HelloWorld.jsx'
         code={ helloWorldCode }
-        highlightLines={[ 3, 4, 5, 6, 7 ]}>
+        highlightLines={[ 3, 4, 6, 7 ]}>
       <HelloWorld />
     </DemoCodeVertical>,
     <DemoCodeVertical
@@ -185,25 +187,7 @@ export default {
         ]}>
       <h1>Messy</h1>
     </DemoCodeVertical>,
-    <DemoCodeVertical
-        title='TodoView.jsx'
-        code={ todoViewUnstyledCode }
-        keepRange={[
-          { first: 12, last: 15 },
-          { first: 18, last: 25 },
-          { first: 31, last: 36 }
-        ]}
-        highlightLines={[ 12, 14, 19, 23, 24, 31, 32, 33, 34, 35, 36 ]}>
-      <h1>Todo <b>view</b></h1>
-    </DemoCodeVertical>,
-    <DemoCodeVertical
-        title='TodoView.jsx'
-        code={ todoViewUnstyledCode }
-        keepRange={[
-          { first: 2, last: 10 }
-        ]}>
-      <h1>Todo <b>view</b></h1>
-    </DemoCodeVertical>,
+    <ContainerVsPresentational />,
     <DemoCodeVertical
         title='TodoContainer.jsx'
         code={ todoContainerCode }
@@ -216,7 +200,27 @@ export default {
         highlightLines={[ 10, 12, 13, 21, 24, 25, 26, 27, 28 ]}>
       <h1>Todo <b>container</b></h1>
     </DemoCodeVertical>,
-    <ContainerVsPresentational />,
+    <DemoCodeVertical
+        title='TodoView.jsx'
+        code={ todoViewUnstyledCode }
+        keepRange={[
+          { first: 12, last: 13 },
+          { first: 18, last: 25 },
+          { first: 31, last: 36 }
+        ]}
+        highlightLines={[ 12, 13, 19, 23, 24, 31, 32, 33, 34, 35, 36 ]}>
+      <h1>Todo <b>view</b></h1>
+    </DemoCodeVertical>,
+    <DemoCodeVertical
+        title='TodoView.jsx'
+        code={ todoViewUnstyledCode }
+        keepRange={[
+          { first: 2, last: 10 },
+          { first: 13, last: 15 }
+        ]}
+        highlightLines={[ 2, 3, 4, 5, 6, 7, 8, 9, 10, 14 ]}>
+      <h1>Todo <b>view</b></h1>
+    </DemoCodeVertical>,
     <StyleLoaders />,
     <DemoCodeVertical
         title='TodoView.jsx'
@@ -237,14 +241,16 @@ export default {
         keepRange={[
           { first: 0, last: 0 },
           { first: 4, last: 5 },
-          { first: 9, last: 10 },
-          { first: 12, last: 13 },
-          { first: 16, last: 16 },
-          { first: 18, last: 18 },
-          { first: 19, last: 19 }
+          { first: 11, last: 11 },
+          { first: 15, last: 17 },
+          { first: 19, last: 20 },
+          { first: 23, last: 23 },
+          { first: 25, last: 26 }
         ]}
         highlightLines={[  ]}>
       <h1>Todo <b>view</b></h1>
-    </DemoCodeVertical>
+    </DemoCodeVertical>,
+    <Questions />,
+    <Links />
   ]
 };

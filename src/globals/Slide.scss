@@ -1,3 +1,4 @@
+@import '~styles/_constants.scss';
 @import '~styles/_layouts.scss';
 
 .slide {
@@ -44,6 +45,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 2px;
-  background-color: blue;
+  height: 4px;
+  background-color: $active;
 }

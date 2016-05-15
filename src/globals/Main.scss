@@ -1,3 +1,4 @@
+@import '~styles/_constants.scss';
 @import '~styles/_utils.scss';
 @import '~styles/_layouts.scss';
 
@@ -55,4 +56,17 @@ h3 {
 
 p {
   text-align: center;
+}
+
+code {
+  font-family: $code-font-family;
+}
+
+a {
+  color: $active;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
