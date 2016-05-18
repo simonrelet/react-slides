@@ -25,6 +25,9 @@ import Links from './Links';
 import HelloWorld from './examples/HelloWorld';
 import HelloSomeone from './examples/HelloSomeone';
 
+import indexHTMLCode from '!!raw!./examples/index.html';
+import indexJSCode from '!!raw!./examples/index.js';
+import helloWorldOutput from '!!raw!./examples/helloWorldOutput.html';
 import helloWorldCode from '!!raw!./examples/HelloWorld';
 import helloWorldCompiledCode from '!!raw!./examples/HelloWorld_compiled';
 import helloYouCode from '!!raw!./examples/HelloYou';
@@ -49,6 +52,17 @@ export default {
     <VirtualDOM />,
     <RenderingLoop />,
     <JSX />,
+    <DemoCodeVertical
+        title='index.html'
+        code={ indexHTMLCode }
+        highlightLines={[ 5, 8 ]}>
+      <HelloWorld />
+    </DemoCodeVertical>,
+    <DemoCodeVertical
+        title='index.js'
+        code={ indexJSCode }>
+      <HelloWorld />
+    </DemoCodeVertical>,
     <DemoCodeVertical
         title='HelloWorld.jsx'
         code={ helloWorldCode }>
@@ -85,6 +99,12 @@ export default {
       <HelloWorld />
     </DemoCodeVertical>,
     <ItsJustJavaScript />,
+    <DemoCodeVertical
+        title='Rendered HTML'
+        code={ helloWorldOutput }
+        highlightLines={[ 9 ]}>
+      <HelloWorld />
+    </DemoCodeVertical>,
     <DataFlow />,
     <PropsAndState />,
     <PropTypes />,
