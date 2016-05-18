@@ -7,7 +7,11 @@ import SlideContainer from './SlideContainer';
 import Config from 'slides/Config';
 
 function getConfig(index, count) {
-  const res = { slideIndex: index, slideCount : count }
+  const res = {
+    slideIndex: index,
+    slideCount : count
+  };
+
   for (let prop in Config) {
     if (Config.hasOwnProperty(prop) && prop !== 'slides') {
       res[prop] = Config[prop]

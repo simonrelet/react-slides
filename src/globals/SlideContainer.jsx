@@ -56,12 +56,10 @@ export default React.createClass({
   },
 
   render() {
-    const route = this.props.route;
-    if (document && route.config.title) {
-      const subtitle = route.config.subtitle
-        ? ` - ${route.config.subtitle}`
-        : '';
-      document.title = `${route.config.title}${subtitle}`;
+    const { route } = this.props;
+    const { title, subtitle } = route.config;
+    if (document && title) {
+      document.title = `${title}${subtitle ? ` - ${subtitle}` : ''}`;
     }
 
     return (

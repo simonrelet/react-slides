@@ -47,7 +47,7 @@ module.exports = {
     extensions: [ '', '.js', '.jsx' ],
     alias: {
       styles: `${__dirname}/src/styles-partials`,
-      icons: `${__dirname}/src/icons`
+      icons: `${__dirname}/src/styles-partials/icons`
     }
   }
 };

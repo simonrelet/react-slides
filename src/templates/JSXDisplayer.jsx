@@ -5,13 +5,39 @@ import lexer from 'jsx-lexer';
 import style from './JSXDisplayer.scss';
 import classnames from 'classnames';
 
+function JSXLine(props) {
+  return (
+    <div className={ props.classNames }>
+      <code>{ props.code }</code>
+      <br />
+    </div>
+  );
+}
+
+JSXLine.propTypes = {
+  classNames: PropTypes.string.isRequired,
+  code: PropTypes.arrayOf(PropTypes.element).isRequired
+};
+
+function JSXToken(props) {
+  return (
+    <span className={ props.className }>
+      { props.value }
+    </span>
+  );
+}
+
+JSXToken.propTypes = {
+  className: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired
+};
+
 function wrap(key, className, value) {
   return (
-    <span
+    <JSXToken
         key={ key }
-        className={ className }>
-      { value }
-    </span>
+        className={ className }
+        value={ value } />
   );
 }
 
@@ -83,14 +109,10 @@ function parse(content, highlightLines = [], keepRange = []) {
     .reduce(regroupRanges, [])
     .reduce(separateRangeGroups, [])
     .map(line => (
-      <div
+      <JSXLine
           key={ line.lineIndex }
-          className={ getLineClassName(line.lineIndex, highlightLines) }>
-        <code>
-          { parseLine(line.line) }
-          <br />
-        </code>
-      </div>
+          classNames={ getLineClassName(line.lineIndex, highlightLines) }
+          code={ parseLine(line.line) } />
     ));
 }
 

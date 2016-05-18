@@ -13,8 +13,8 @@ export default React.createClass({
   },
   handleAddTodo(e) {
     e.preventDefault();
-    const s = this.state;
-    const newTodos = s.todos.concat(s.value);
+    const { state } = this;
+    const newTodos = state.todos.concat(state.value);
     this.setState({
       todos: newTodos,
       value: ''
