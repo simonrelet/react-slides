@@ -50,7 +50,7 @@ export default React.createClass({
   handleKeyUp(e) {
     if (e.keyCode === RIGHT_KEY) {
       this.handleNextSlide(e);
-    } else if(e.keyCode === LEFT_KEY) {
+    } else if (e.keyCode === LEFT_KEY) {
       this.handlePrevSlide(e);
     }
   },

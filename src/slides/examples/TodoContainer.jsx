@@ -6,7 +6,7 @@ export default React.createClass({
     return {
       todos: [],
       value: ''
-    }
+    };
   },
   handleValueChanged(e) {
     this.setState({ value: e.target.value });

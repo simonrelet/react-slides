@@ -2,7 +2,7 @@ import React from 'react';
 
 export default React.createClass({
   getInitialState() {
-    return { todos: [] }
+    return { todos: [] };
   },
   render() {
     const todos = this.state.todos.map((td, i) => (

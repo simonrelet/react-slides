@@ -5,7 +5,9 @@ import style from './Slide.scss';
 
 function ProgressBar(props) {
   return (
-    <div className={ style.progressBar } style={{ width: `${props.progress}%` }} />
+    <div
+        className={ style.progressBar }
+        style={{ width: `${props.progress}%` }} />
   );
 }
 
@@ -13,17 +15,45 @@ ProgressBar.propTypes = {
   progress: PropTypes.number.isRequired
 };
 
+function Link(props) {
+  const className = props.type === 'next' ? style.prevSlide : style.nextSlide;
+  return (
+    <div
+        onClick={ props.onAction }
+        className={ className } />
+  );
+}
+
+Link.propTypes = {
+  onAction: PropTypes.func.isRequired,
+  type: PropTypes.oneOf([ 'next', 'prev' ])
+};
+
+function createLink(type, handleAction) {
+  return <Link onAction={ handleAction } type={ type } />;
+}
+
 export default function Slide(props) {
+  const {
+    config,
+    onKeyUp,
+    hasPrev,
+    onPrevSlide,
+    hasNext,
+    onNextSlide,
+    slide
+  } = props;
+  const progress = 100 * (config.slideIndex + 1) / config.slideCount;
   return (
     <div
         tabIndex={ 1 }
         autoFocus={ true }
         className={ style.slide }
-        onKeyDown={ props.onKeyUp }>
-      { props.hasPrev && <div onClick={props.onPrevSlide} className={ style.prevSlide } /> }
-      { props.hasNext && <div onClick={props.onNextSlide} className={ style.nextSlide } /> }
-      <ProgressBar progress={ 100 * (props.config.slideIndex + 1) / props.config.slideCount } />
-      { React.cloneElement(props.slide, { config: props.config }) }
+        onKeyDown={ onKeyUp }>
+      { hasPrev && createLink('prev', onPrevSlide) }
+      { hasNext && createLink('next', onNextSlide) }
+      <ProgressBar progress={ progress } />
+      { React.cloneElement(slide, { config: config }) }
     </div>
   );
 }
@@ -36,4 +66,4 @@ Slide.propTypes = {
   onKeyUp: PropTypes.func.isRequired,
   slide: PropTypes.any.isRequired,
   config: PropTypes.object.isRequired
-}
+};

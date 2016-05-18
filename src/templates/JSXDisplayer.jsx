@@ -92,14 +92,14 @@ function regroupRanges(acc, line) {
 }
 
 function separateRangeGroups(acc, group) {
-  if (!acc.length) {
-    return group;
-  } else {
+  if (acc.length) {
     return acc.concat({
       lineIndex: group[0].lineIndex - 1,
       line: '// ...'
     }).concat(group);
   }
+
+  return group;
 }
 
 function parse(content, highlightLines = [], keepRange = []) {

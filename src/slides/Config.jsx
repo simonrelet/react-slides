@@ -266,8 +266,7 @@ export default {
           { first: 19, last: 20 },
           { first: 23, last: 23 },
           { first: 25, last: 26 }
-        ]}
-        highlightLines={[  ]}>
+        ]}>
       <h1>Todo <b>view</b></h1>
     </DemoCodeVertical>,
     <Questions />,

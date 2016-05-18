@@ -1,5 +1,5 @@
 {
-  "extends": ["google", "eslint:recommended", "plugin:react/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "google"],
   "plugins": ["react"],
   "parserOptions": {
     "ecmaVersion": 6,
@@ -15,6 +15,15 @@
     "array-bracket-spacing": ["error", "always", {
       "objectsInArrays": false,
       "arraysInArrays": false
-    }]
+    }],
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": false,
+        "MethodDefinition": false,
+        "ClassDeclaration": false
+      }
+    }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "max-len": ["warn", 100]
   }
 }
