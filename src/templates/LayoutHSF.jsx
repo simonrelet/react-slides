@@ -1,7 +1,7 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import Layout from 'templates/containers/Layout';
+import Layout from './Layout';
 
 export default function LayoutHSF(props) {
   return (

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import LayoutVCM from 'templates/containers/LayoutVCM';
+import LayoutVCM from 'templates/LayoutVCM';
 
 export default function Slide() {
   return (

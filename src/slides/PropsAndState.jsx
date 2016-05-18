@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import LayoutHSF from 'templates/containers/LayoutHSF';
-import LayoutVCM from 'templates/containers/LayoutVCM';
+import LayoutHSF from 'templates/LayoutHSF';
+import LayoutVCM from 'templates/LayoutVCM';
 
 export default function Slide() {
   return (

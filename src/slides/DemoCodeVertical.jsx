@@ -1,8 +1,8 @@
 'use strict';
 
 import React, { PropTypes } from 'react';
-import LayoutVCM from 'templates/containers/LayoutVCM';
-import JSXDisplayer from 'templates/components/JSXDisplayer';
+import LayoutVCM from 'templates/LayoutVCM';
+import JSXDisplayer from 'templates/JSXDisplayer';
 
 export default React.createClass({
   getDefaultProps() {
