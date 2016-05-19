@@ -26,7 +26,7 @@ const slidesRoutes = Config.slides.map((slide, index) => (
       path={ `${index}` }
       key={ index }
       slide={ slide }
-      config= { getConfig(index, slideCount) }
+      config={ getConfig(index, slideCount) }
       component={ SlideContainer } />
 ));
 
