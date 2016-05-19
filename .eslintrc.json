@@ -8,7 +8,8 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "mocha": true
   },
   "rules": {
     "object-curly-spacing": ["error", "always"],
@@ -24,6 +25,7 @@
       }
     }],
     "jsx-quotes": ["error", "prefer-single"],
-    "max-len": ["warn", 100]
+    "max-len": ["warn", 100],
+    "linebreak-style": "off"
   }
 }
