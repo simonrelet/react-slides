@@ -16,7 +16,7 @@ ProgressBar.propTypes = {
 };
 
 function Link(props) {
-  const className = props.type === 'next' ? style.prevSlide : style.nextSlide;
+  const className = props.type === 'prev' ? style.prevSlide : style.nextSlide;
   return (
     <div
         onClick={ props.onAction }
